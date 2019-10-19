@@ -1,6 +1,8 @@
 A popular game [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) to be played through the command line.
 
 Programming language - **Ruby**.
+### Requirements
+* Ruby 2.4 or higher
 ### Rules
 Described on [wikihow](https://www.wikihow.com/Play-Hangman).
 ### Features
@@ -12,10 +14,7 @@ Described on [wikihow](https://www.wikihow.com/Play-Hangman).
 * Works with both English and Russian letters. Made some features to work with Russian.
 ### Start to play
 The game is using the command line. To start playing:
-1. Download all files:
-  * main.rb
-  * /lib
-  * /data 
+1. Download the repository using the [instruction](https://help.github.com/en/articles/cloning-a-repository).
 2. In the command line go to the directory with the files downloaded.
 3. Type 
 ```console
