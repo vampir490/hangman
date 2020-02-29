@@ -1,3 +1,5 @@
+require 'colorize'
+
 #class manages the interaction with user via console
 class ConsoleInterface
   # Status pictures are located in data/figures
@@ -16,14 +18,20 @@ class ConsoleInterface
       Word: #{word_to_show}
       #{figure}
       Errors (#{@game.errors_made}): #{errors_to_show}
-      Errors left: #{@game.errors_allowed}
-
     END
 
+    left = "Errors left: #{@game.errors_allowed}"
+
+    case @game.errors_allowed
+    when 0..2 then puts left.colorize(:red)
+    when 3..5 then puts left.colorize(:yellow)
+    else puts left.colorize(:green)
+    end
+
     if @game.won?
-      puts "U-hooo! You won! Congratulations!"
+      puts "U-hooo! You won! Congratulations!".colorize(:light_green)
     elsif @game.lost?
-      puts "You lost. We played with the word: #{@game.word}"
+      puts "You lost. We played with the word: #{@game.word}".colorize(:red)
     end
   end
 
