@@ -1,4 +1,5 @@
-A popular game [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) to be played through the command line.
+A popular game [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) to be played through the command line. 
+A training project as part of Ruby / Ruby on Rails coding bootcamp. It shows mainly the ability to work with classes, the principles of OOP, separation of the program.
 
 Programming language - **Ruby**.
 ### Requirements

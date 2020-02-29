@@ -1,3 +1,4 @@
+#class manages the interaction with user via console
 class ConsoleInterface
   # Status pictures are located in data/figures
   FIGURES =
@@ -9,6 +10,7 @@ class ConsoleInterface
     @game = game
   end
 
+  #prints the status of the game: a word with blank unguessed letters, errors, the final status
   def print_out
     puts <<~END
       Word: #{word_to_show}
@@ -25,10 +27,12 @@ class ConsoleInterface
     end
   end
 
+  #chooses the right picture from FIGURES based on the number of errors
   def figure
-    return FIGURES[@game.errors_made]
+    FIGURES[@game.errors_made]
   end
 
+  #shows the letter with blank unguessed letters
   def word_to_show
     result =
       @game.letters_to_guess.map do |letter|
@@ -39,16 +43,17 @@ class ConsoleInterface
         end
       end
 
-    return result.join(' ')
+    result.join(' ')
   end
 
+  #shows errors
   def errors_to_show
-    return @game.errors.join(', ')
+    @game.errors.join(', ')
   end
 
+  #gets the next letter to be played
   def get_input
     print "Enter the next letter: "
     letter = gets[0].upcase
-    return letter
   end
 end
